@@ -12,7 +12,7 @@ function keks(i)
 {
 	var exp = setInterval(()=>
 	{
-		if (document.querySelector("#playlist-items[selected]>a") && document.querySelector("#playlist-items[selected]>a").getAttribute('href').slice(6,-8) == document.location.search.slice(0,i==0?undefined:-8)){
+		if (document.querySelector("#playlist-items[selected]>a") && document.querySelector("#playlist-items[selected]>a").getAttribute('href').slice(6,-8) == document.location.search.slice(0,-8)){
 			clearInterval(exp);
 			if(!i&&document.querySelector('.ytp-left-controls>span>div>div>div').getAttribute('style') != 'left: 0px;') 
 				document.querySelector(".ytp-mute-button.ytp-button").click();
